@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Card from '../Card/Card';
+import Card from '../Card/Card.jsx';
 import { swapCardStack } from '../../reducers/cardReducer.js';
 import './CardStack.css';
 
