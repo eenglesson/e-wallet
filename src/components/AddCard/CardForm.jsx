@@ -25,12 +25,14 @@ function CardForm() {
     const { name, value } = e.target;
 
     if (name === 'cardNumber') {
-      let v = value.replace(/\s+/g, '');
-      if (v.length > 16) {
-        v = v.substring(0, 16);
+      let formattedInput = value.replace(/\D/g, '');
+      formattedInput = formattedInput.replace(/(.{4})/g, '$1 ').trim();
+
+      if (formattedInput.length > 19) {
+        formattedInput = formattedInput.substring(0, 19);
       }
-      v = v.replace(/(\d{4})/g, '$1 ').trim();
-      const updatedCardInfo = { ...cardInfo, [name]: v };
+
+      const updatedCardInfo = { ...cardInfo, [name]: formattedInput };
       setCardInfo(updatedCardInfo);
       dispatch(setCardData(updatedCardInfo));
       return;
