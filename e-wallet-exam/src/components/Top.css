@@ -1,0 +1,40 @@
+.top-site {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.active-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-title-card-active {
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'pt mono';
+  color: black;
+}
+.card-pointer {
+  cursor: pointer;
+}
+
+.btn-card-delete {
+  width: 128px;
+  height: 32px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  border: 1px solid red;
+  color: red;
+
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'pt mono';
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}

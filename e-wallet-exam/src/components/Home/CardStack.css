@@ -1,0 +1,31 @@
+.card-stack-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 460px;
+  width: 382px;
+}
+
+.card-stack-container .card-container {
+  position: absolute;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: 40px;
+}
+
+.card-stack-container .card-container:not(:first-child) {
+  top: 0px;
+}
+
+.card-stack-container .card-container:nth-child(2) {
+  top: 50px;
+  z-index: 89;
+}
+.card-stack-container .card-container:nth-child(3) {
+  top: 100px;
+  z-index: 90;
+}
+.card-stack-container .card-container:nth-child(4) {
+  top: 150px;
+  z-index: 91;
+}

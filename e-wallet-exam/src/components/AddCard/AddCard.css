@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.addcard-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.home-title {
+  font-family: 'pt mono';
+  font-weight: 700;
+  font-size: 35px;
+}

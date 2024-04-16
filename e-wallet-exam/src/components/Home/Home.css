@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.home-site {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 414px;
+  gap: 16px;
+}
+
+.home-title {
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  font-family: 'Manrope', sans-serif;
+  color: #222222;
+  padding: 16px;
+}
+
+.btn-add-new-card {
+  height: 80px;
+  width: 382px;
+  border: 1px solid;
+  border-radius: 8px;
+  background-color: transparent;
+  font-family: 'pt mono';
+  font-weight: 700;
+  font-size: 22px;
+  cursor: pointer;
+}

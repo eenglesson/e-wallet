@@ -1,0 +1,76 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+.card-container {
+  width: 382px;
+  height: 242px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container__emblems {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.card-number {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  font-size: 31px;
+  font-family: 'pt mono', sans-serif;
+  font-weight: 400;
+  padding-left: 16px;
+}
+
+.card-info-container {
+  margin-top: 16px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'pt mono', sans-serif;
+  font-weight: 400;
+}
+
+/* NAME CONTAINER */
+.card-name-container {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'pt mono', sans-serif;
+  font-weight: 400;
+}
+
+.card-name-container p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card-name-container h2 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* DATE CONTAINER */
+.card-date-container {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  font-family: 'pt mono', sans-serif;
+  font-weight: 400;
+  align-items: end;
+}
+
+.card-date-container p {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.card-date-container span {
+  font-size: 18px;
+}

@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 382px;
+  gap: 16px;
+}
+
+.card-input-large {
+  font-size: 22px;
+  font-family: 'pt mono';
+  font-weight: 400;
+  height: 56px;
+
+  border-radius: 8px;
+  border: 1px solid;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 382px;
+}
+
+label {
+  font-size: 12px;
+  letter-spacing: 0.1px;
+  color: rgba(0, 0, 0, 0.7);
+  font-family: 'pt mono';
+  font-weight: 400;
+}
+
+.form-group-row {
+  display: flex;
+  justify-content: space-between;
+  width: 382px;
+}
+
+.card-input-small {
+  height: 56px;
+  width: 175px;
+  border: 1px solid;
+  border-radius: 8px;
+  font-size: 22px;
+  font-family: 'pt mono';
+  font-weight: 400;
+}
+
+.btn-submit {
+  width: 382px;
+  height: 72px;
+  background: #000000;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  border: 0;
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'pt mono';
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+.btn-back {
+  width: 382px;
+  height: 72px;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 8px;
+  border: 1px solid;
+
+  font-size: 22px;
+  font-weight: 700;
+  font-family: 'pt mono';
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+input {
+  padding-left: 10px;
+}
+
+select {
+  padding-left: 8px;
+}
+
+.select-text-arrow {
+  height: 56px;
+  width: 382px;
+  border-radius: 8px;
+  border: 1px solid;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.invalid-input::placeholder {
+  color: red;
+}
