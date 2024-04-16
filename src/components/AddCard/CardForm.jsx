@@ -24,18 +24,48 @@ function CardForm() {
   const handleChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === 'cardHolderName' && value.length > 24) {
+    if (name === 'cardNumber') {
+      let v = value.replace(/\s+/g, '');
+      if (v.length > 16) {
+        v = v.substring(0, 16);
+      }
+      v = v.replace(/(\d{4})/g, '$1 ').trim();
+      const updatedCardInfo = { ...cardInfo, [name]: v };
+      setCardInfo(updatedCardInfo);
+      dispatch(setCardData(updatedCardInfo));
       return;
     }
 
-    if (name === 'cardNumber' && value.length > 19) {
-      return;
-    }
-    if (name === 'validThru' && value.length > 7) {
+    if (name === 'validThru') {
+      let formattedInput = value.replace(/[^0-9/ ]/g, '');
+
+      if (
+        formattedInput.length === 2 &&
+        cardInfo.validThru &&
+        cardInfo.validThru.length <= 2
+      ) {
+        formattedInput += ' / ';
+      } else if (
+        formattedInput.length === 5 &&
+        value.length < cardInfo.validThru.length
+      ) {
+        formattedInput = formattedInput.slice(0, 2);
+      }
+
+      if (formattedInput.length > 7) {
+        formattedInput = formattedInput.substring(0, 7);
+      }
+
+      const updatedCardInfo = { ...cardInfo, [name]: formattedInput };
+      setCardInfo(updatedCardInfo);
+      dispatch(setCardData(updatedCardInfo));
       return;
     }
 
-    if (name === 'ccv' && value.length > 3) {
+    if (
+      (name === 'cardHolderName' && value.length > 24) ||
+      (name === 'ccv' && value.length > 3)
+    ) {
       return;
     }
 
